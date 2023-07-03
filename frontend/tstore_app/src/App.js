@@ -1,7 +1,10 @@
 import './App.css';
+import {Home} from './components/Home/Home';
 
 const App = () => {
-    return <h1>Welcome to TStore</h1>;
+    return (
+        <Home />
+    );
 }
 
 export {App};
