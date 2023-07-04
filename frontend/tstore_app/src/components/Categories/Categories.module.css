@@ -71,6 +71,10 @@
         margin: 0;
     }
 
+    .selectBlock {
+        width: 100px;
+    }
+
     .sortBlock {
         margin-right: 15px;
     }

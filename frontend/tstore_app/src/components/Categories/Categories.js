@@ -13,8 +13,8 @@ const Categories = () => {
                 <section className={s.sortBlock}>
                     <select className={s.selectBlock}>
                         <option disable>Sorting by</option>
-                        <option value="1">Price(increase)</option>
-                        <option value="2">Price(less)</option>
+                        <option value="1">Price(up)</option>
+                        <option value="2">Price(down)</option>
                         <option value="3">Title(up)</option>
                         <option value="4">Title(down)</option>
                     </select>
