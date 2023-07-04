@@ -3,5 +3,5 @@ from .views import *
 from .models import *
 
 urlpatterns = [
-
+    path('sneakers/', SneakersList.as_view())
 ]

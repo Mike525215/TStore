@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from .serializers import *
+from .models import *
 
-# Create your views here.
+class SneakersList(ListAPIView):
+    queryset = Sneakers.objects.all()
+    serializer_class = SneakersSerializer
+
