@@ -32,6 +32,10 @@
         grid-template-columns: 1fr;
     }
 
+    .title {
+        margin-left: 5px;
+    }
+
     .cardItem {
         width: 250px;
         margin-bottom: 15px;
