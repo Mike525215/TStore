@@ -122,16 +122,13 @@ header {
 }
 
 @media (max-width: 530px) {
-    header {
-        height: 100px;
-    }
 
     .logoBlock {
-        display: none;
+        flex: 0.25;
     }
 
     .cartBlock {
-        flex: 1;
+        flex: 0.3;
     }
 
     .cartLink {
@@ -139,8 +136,15 @@ header {
     }
 
     .searchBlock {
-        flex: 1.5;
-        margin-left: 15px;
+        flex: 1;
+    }
+
+    .totalPrice {
+        display: none;
+    }
+
+    .totalCount {
+        border-left: none;
     }
 }
 
