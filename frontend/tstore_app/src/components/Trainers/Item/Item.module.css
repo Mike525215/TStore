@@ -1,0 +1,64 @@
+.cardItem {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+}
+
+.cardImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.itemName {
+    font-size: 21px;
+    color: #181818;
+    font-weight: 600;
+    margin-left: 35px;
+}
+
+.itemDescription {
+    color: grey;
+    font-size: 15px;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.itemPrice {
+    margin-left: 35px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 676px) {
+    .cardItem {
+        width: 175px;
+    }
+    .cardImage {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 530px) {
+    .cardItem {
+        width: 250px;
+        margin-bottom: 15px;
+    }
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+
+}

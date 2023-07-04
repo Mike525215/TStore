@@ -1,0 +1,46 @@
+.wrapper {
+   margin: 22px;
+}
+
+.title {
+    font-size: 27px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.trainersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 5px;
+}
+
+@media (max-width: 900px) {
+    .trainersList {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 530px) {
+    .trainersList {
+        grid-template-columns: 1fr;
+    }
+
+    .cardItem {
+        width: 250px;
+        margin-bottom: 15px;
+    }
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+
