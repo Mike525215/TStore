@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <header>
             <div className={s.logoBlock}>
-                <img className={s.logoImage} src="shoes.png" alt="jordan"/>
+                <Link to="/sneakers/">
+                    <img className={s.logoImage} src="https://cdn-icons-png.flaticon.com/128/9348/9348982.png" alt="jordan"/>
+                </Link>
                 <div className={s.textLogo}>
                     <span className={s.logoText}>TSTORE</span>
                     <span className={s.description}>The best trainers</span>
@@ -13,12 +15,12 @@ const Header = () => {
             </div>
             <div className={s.searchBlock}>
                 <button className={s.searchBtn}>
-                    <img src="search.png" alt="search" />
+                    <img src="https://cdn-icons-png.flaticon.com/128/5636/5636698.png" alt="search" />
                 </button>
-                <input placeholder='Search trainers...'/>
+                <input placeholder='Search sneakers...'/>
             </div>
             <div className={s.cartBlock}>
-                <a href="/cart/" className={s.cartLink}>
+                <Link to="/cart/" className={s.cartLink}>
                     <span className={s.totalPrice}>$ 0</span>
                     <span className={s.totalCount}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
@@ -27,7 +29,7 @@ const Header = () => {
                         </svg>
                         0
                     </span>
-                </a>
+                </Link>
             </div>
         </header>
     )
