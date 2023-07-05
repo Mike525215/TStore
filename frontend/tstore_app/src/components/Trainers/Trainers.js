@@ -6,7 +6,7 @@ const Trainers = (props) => {
         <div className={s.wrapper}>
             <span className={s.title}>Sneakers</span>
             <section className={s.trainersList}>
-                {props.sneakers.map(item => <Item item={item} />)}
+                {props.sneakers.map(item => <Item item={item} key={item.id} />)}
             </section>
         </div>
     )
