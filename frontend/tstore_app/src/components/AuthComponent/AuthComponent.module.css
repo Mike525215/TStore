@@ -14,9 +14,15 @@
 .btn,
 .authBtn {
     width: 125px;
-    height: 25px;
+    height: 30px;
+    font-weight: 600;
     border: none;
     font-size: 16px;
     border-radius: 10px;
-    cursor: pointer;
+    background: #fff;
+    color: #181818;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
