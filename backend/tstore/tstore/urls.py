@@ -22,5 +22,5 @@ urlpatterns = [
     path('auth/', include('rest_framework.urls')),
     path('api/v1/', include('tstore_App.urls')),
     path('api/v1/auth/', include('djoser.urls')),
-    re_path(r'^auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.authtoken')),
 ]
