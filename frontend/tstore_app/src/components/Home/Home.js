@@ -2,10 +2,13 @@ import {Header} from '../Header/Header';
 import {Categories} from '../Categories/Categories';
 import {Trainers} from '../Trainers/Trainers';
 import s from './Home.module.css';
-import {useState, useMemo} from 'react';
+import {useState, useEffect, createContext} from 'react';
 import {services} from '../../services/services.js';
 
+export const SneakersList = createContext();
+
 const Home = () => {
+
     const [sneakers, setSneakers] = useState([]);
 
     const sneakersRender = async () => {
@@ -14,17 +17,18 @@ const Home = () => {
         setSneakers(response);
     }
 
-    useMemo(() => {
+    useEffect(() => {
         sneakersRender();
-    }, [sneakers]);
-
+    }, []);
 
     return (
-        <main>
-            <Header />
-            <Categories />
-            <Trainers sneakers={sneakers} />
-        </main>
+        <SneakersList.Provider value={{sneakers}}>
+            <main>
+                <Header />
+                <Categories />
+                <Trainers />
+            </main>
+        </SneakersList.Provider>
     );
 }
 
