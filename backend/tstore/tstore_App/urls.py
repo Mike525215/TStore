@@ -3,5 +3,6 @@ from .views import *
 from .models import *
 
 urlpatterns = [
-    path('sneakers/', SneakersList.as_view())
+    path('sneakers/', SneakersAPIView.as_view()),
+    path('sneakers/<int:pk>/', ItemAPIView.as_view())
 ]
