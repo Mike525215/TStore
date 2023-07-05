@@ -19,11 +19,6 @@
     .trainersList {
         grid-template-columns: 1fr 1fr;
     }
-
-    .cardImage {
-        width: 200px;
-        height: 200px;
-    }
 }
 
 
@@ -36,14 +31,6 @@
         margin-left: 5px;
     }
 
-    .cardItem {
-        width: 250px;
-        margin-bottom: 15px;
-    }
-    .cardImage {
-        width: 200px;
-        height: 200px;
-    }
 
 }
 
