@@ -1,6 +1,6 @@
 import s from './Trainers.module.css';
 import {Item} from './Item/Item';
-import {SneakersList} from '../Home/Home';
+import {SneakersList} from '../../routers/Routers.js';
 import {useContext} from 'react';
 
 const Trainers = () => {
