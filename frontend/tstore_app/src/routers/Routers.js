@@ -25,7 +25,8 @@ const Routers = () => {
         <BrowserRouter>
             <Routes>
                 <Route element={<Home />} path='/sneakers/' />
-                <Route element={<SneakersDetail />} path='/sneakers/:id/' />
+                <Route element={<Home />} path='/sneakers/:cat' />
+                <Route element={<SneakersDetail />} path='/sneakers/:cat/:id/' />
                 <Route element={<Home />} path='/cart/' />
                 <Route element={<div><h1>Page not Found 404</h1></div>} path="*" />
             </Routes>
