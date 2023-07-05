@@ -1,0 +1,22 @@
+.authButtons {
+    height: 50px;
+    width: 92.5%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin-right: 20px;
+}
+
+.btn,
+.authBtn {
+    width: 125px;
+    height: 25px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
