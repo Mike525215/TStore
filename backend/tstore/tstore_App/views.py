@@ -8,7 +8,7 @@ from .models import *
 class SneakersAPIView(ListAPIView):
     queryset = Sneakers.objects.all()
     serializer_class = SneakersSerializer
-    # permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     filter_backends = [filters.SearchFilter]
     search_fields = ["title"]
 
