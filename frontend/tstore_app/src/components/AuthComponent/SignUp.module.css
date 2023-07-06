@@ -1,0 +1,76 @@
+.signupCard {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.signupBtn {
+    width: 125px;
+    margin: 0 auto;
+    height: 27px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    box-shadow: 0.5px 1px 8px #333;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.username,
+.password,
+.email,
+.passwordF{
+    width: 80%;
+    margin: 0 auto;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0.5px 0.5px 8px grey;
+    outline: none;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.nameError,
+.passError,
+.emailError{
+    width: 80%;
+    margin: 0 auto;
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.nameError {
+    margin-top: 15px;
+}
+
+.authBtn {
+    width: 125px;
+    margin: 0 auto;
+    height: 27px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0.5px 1px 8px #333;
+}
+
+.passwordF {
+    margin-top: 25px;
+}
