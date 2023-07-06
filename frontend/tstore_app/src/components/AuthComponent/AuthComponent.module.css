@@ -26,3 +26,26 @@
     justify-content: center;
     align-items: center;
 }
+.username {
+    font-size: 18px;
+    color: #181818;
+    margin-right: 20px;
+    background: #fff;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.logoutBtn {
+    border: none;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    color: #181818;
+    border-radius: 12px;
+}
