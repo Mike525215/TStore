@@ -11,6 +11,8 @@ export const SneakersList = createContext();
 const Routers = () => {
 
     const [sneakers, setSneakers] = useState([]);
+    const [token, setToken] = useState('');
+    const [username, setUsername] = useState('');
 
     const sneakersRender = async () => {
         const request = await services.sneakersList();
@@ -22,8 +24,16 @@ const Routers = () => {
         sneakersRender();
     }, []);
 
+
+
     return (
-        <SneakersList.Provider value={{sneakers}}>
+        <SneakersList.Provider value={{
+            sneakers,
+            username,
+            setUsername,
+            token,
+            setToken
+        }}>
         <BrowserRouter>
             <Routes>
                 <Route element={<Home />} path='/sneakers/' />
