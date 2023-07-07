@@ -1,0 +1,97 @@
+.sneakersDetail {
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 40px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+}
+
+.itemInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.cardItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.itemName {
+    font-size: 21px;
+    color: #181818;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.itemDescr {
+    color: grey;
+    font-size: 15px;
+}
+
+.itemPrice {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.itemText {
+    margin-top: 20px;
+    width: 90%;
+}
+
+.itemTextTitle {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.itemTextPtOne {
+    margin-bottom: 20px;
+}
+
+.itemTextPtOne,
+.itemTextPtTwo {
+    display: block;
+}
+
+.linkBack {
+    background: #333;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 33px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.linkBackInner {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 650px) {
+    .itemInfo {
+        grid-template-columns: 1fr;
+    }
+}
