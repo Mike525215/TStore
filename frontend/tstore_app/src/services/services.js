@@ -36,6 +36,14 @@ const services = {
             body: body
         });
         return request;
+    },
+    async lookFor(item) {
+        const request = await fetch("http://127.0.0.1:8000/api/v1/sneakers?search=" + item);
+        return request;
+    },
+    async filteringItems(category) {
+        const request = await fetch("http://127.0.0.1:8000/api/v1/sneakers?category=" + category);
+        return request;
     }
 };
 
