@@ -15,6 +15,7 @@
     row-gap: 5px;
 }
 
+
 @media (max-width: 900px) {
     .trainersList {
         grid-template-columns: 1fr 1fr;
