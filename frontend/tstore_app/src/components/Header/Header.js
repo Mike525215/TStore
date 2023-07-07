@@ -1,11 +1,16 @@
 import s from './Header.module.css';
 import {Link} from 'react-router-dom';
+import {services} from '../../services/services.js';
+import {useState, useContext} from 'react';
+import {SneakersList} from '../../routers/Routers.js';
 
 const Header = () => {
+    const [item, setItem] = useState('');
+    const { setSneakers, sneakersRender } = useContext(SneakersList);
     return (
         <header>
             <div className={s.logoBlock}>
-                <Link to="/sneakers/">
+                <Link to="/sneakers/" onClick={sneakersRender}>
                     <img className={s.logoImage} src="https://cdn-icons-png.flaticon.com/128/9348/9348982.png" alt="jordan"/>
                 </Link>
                 <div className={s.textLogo}>
@@ -14,10 +19,19 @@ const Header = () => {
                 </div>
             </div>
             <div className={s.searchBlock}>
-                <button className={s.searchBtn}>
+                <button className={s.searchBtn}
+                        onClick={
+                            async() => {
+                                const request = await services.lookFor(item);
+                                const result = await request.json();
+                                setSneakers(result);
+                                setItem('');
+                            }
+                        }>
                     <img src="https://cdn-icons-png.flaticon.com/128/5636/5636698.png" alt="search" />
                 </button>
-                <input placeholder='Search sneakers...'/>
+                <input placeholder='Search sneakers...'
+                       onChange={e => setItem(e.target.value)} value={item} />
             </div>
             <div className={s.cartBlock}>
                 <Link to="/cart/" className={s.cartLink}>
