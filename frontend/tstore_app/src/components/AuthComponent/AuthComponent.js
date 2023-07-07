@@ -2,17 +2,24 @@ import s from './AuthComponent.module.css';
 import {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {SneakersList} from '../../routers/Routers';
+import {services} from '../../services/services.js';
 
 const AuthComponent = () => {
 
-    const context = useContext(SneakersList);
+    const { token, username, password, setToken } = useContext(SneakersList);
     let html = '';
 
-        if (context.token) {
+        if (token) {
             html =
                 <div className={s.authButtons}>
-                    <div className={s.username}>{context.username}</div>
-                    <button className={s.logoutBtn}>Logout</button>
+                    <div className={s.username}>{username}</div>
+                    <button className={s.logoutBtn}
+                            onClick={
+                                async() => {
+                                    await services.logout(token, username, password);
+                                    setToken('');
+                                }
+                            }>Logout</button>
                 </div>
         } else {
             html =

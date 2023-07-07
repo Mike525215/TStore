@@ -10,7 +10,7 @@ const Login = () => {
     const [name, setName] = useState('');
     const [pass, setPass] = useState('');
 
-    const context = useContext(SneakersList);
+    const { setToken, setUsername, setPassword } = useContext(SneakersList);
 
     return (
         <div className={s.signupCard}>
@@ -25,8 +25,9 @@ const Login = () => {
                             const request = await services.login(name, pass);
                             const result = await request.json();
                             if (result.auth_token) {
-                                context.setToken(result.auth_token);
-                                context.setUsername(name);
+                                setToken(result.auth_token);
+                                setUsername(name);
+                                setPassword(pass);
                                 navigation('/sneakers/');
                             } else {
                                 setError("Incorrect username or password");

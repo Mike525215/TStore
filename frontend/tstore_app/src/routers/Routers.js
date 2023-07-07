@@ -13,6 +13,7 @@ const Routers = () => {
     const [sneakers, setSneakers] = useState([]);
     const [token, setToken] = useState('');
     const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     const sneakersRender = async () => {
         const request = await services.sneakersList();
@@ -31,6 +32,8 @@ const Routers = () => {
             sneakers,
             username,
             setUsername,
+            password,
+            setPassword,
             token,
             setToken
         }}>
