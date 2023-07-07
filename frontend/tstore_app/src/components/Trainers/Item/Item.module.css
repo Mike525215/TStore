@@ -34,14 +34,69 @@
     font-weight: 600;
 }
 
+@media (max-width: 1500px) {
+    .cardItem {
+        width: 325px;
+    }
+
+    .cardImage {
+        width: 275px;
+        height: 275px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .cardItem {
+        width: 300px;
+    }
+
+    .cardImage {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .cardItem {
+        width: 250px;
+    }
+
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardItem {
+        width: 300px;
+    }
+
+    .cardImage {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cardItem {
+        width: 250px;
+    }
+
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @media (max-width: 600px) {
     .cardItem {
-        width: 200px;
+        width: 225px;
         margin-bottom: 15px;
     }
     .cardImage {
-        width: 150px;
-        height: 150px;
+        width: 175px;
+        height: 175px;
     }
 }
 
