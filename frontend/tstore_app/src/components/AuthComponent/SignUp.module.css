@@ -1,5 +1,5 @@
 .signupCard {
-    width: 300px;
+    width: 333px;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -48,7 +48,7 @@
     width: 80%;
     margin: 0 auto;
     color: red;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
     height: 20px;
     font-size: 14px;
