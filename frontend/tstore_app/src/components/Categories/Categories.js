@@ -1,14 +1,32 @@
 import s from './Categories.module.css';
 import {Link} from 'react-router-dom';
+import {SneakersList} from '../../routers/Routers.js';
+import {useContext} from 'react';
+import {services} from '../../services/services.js';
 
 const Categories = () => {
+    const { setSneakers } = useContext(SneakersList);
+    const filterArray = async (category) => {
+        const request = await services.filteringItems(category);
+        const result = await request.json();
+        setSneakers(result);
+    }
     return (
         <div className={s.categories}>
                 <section className={s.catList}>
                     <ul>
-                        <li><Link to="/sneakers/jordan-1/">Jordan 1</Link></li>
-                        <li><Link to="/sneakers/jordan-4/">Jordan 4</Link></li>
-                        <li><Link to="/sneakers/yeezy-boost/">Yeezy Boost</Link></li>
+                        <li>
+                            <Link to="/sneakers/jordan-1/"
+                                  onClick={() => filterArray(1)}>Jordan 1</Link>
+                        </li>
+                        <li>
+                            <Link to="/sneakers/jordan-4/"
+                                  onClick={() => filterArray(2)}>Jordan 4</Link>
+                        </li>
+                        <li>
+                            <Link to="/sneakers/yeezy-boost/"
+                                  onClick={() => filterArray(3)}>Yeezy Boost</Link>
+                        </li>
                     </ul>
                 </section>
                 <section className={s.sortBlock}>
