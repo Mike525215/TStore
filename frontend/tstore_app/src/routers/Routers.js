@@ -26,7 +26,6 @@ const Routers = () => {
     }, []);
 
 
-
     return (
         <SneakersList.Provider value={{
             sneakers,
@@ -35,7 +34,9 @@ const Routers = () => {
             password,
             setPassword,
             token,
-            setToken
+            setToken,
+            setSneakers,
+            sneakersRender
         }}>
         <BrowserRouter>
             <Routes>
