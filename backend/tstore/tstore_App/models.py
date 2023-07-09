@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Sneakers(models.Model):
     title = models.CharField(max_length=100)
@@ -22,6 +23,12 @@ class Categories(models.Model):
         verbose_name = "Category"
         verbose_name_plural = "Categories"
 
+class Cart(models.Model):
+    sneakers = models.ForeignKey('Sneakers', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = "Sneakers"
+        verbose_name_plural = "Cart"
 
 

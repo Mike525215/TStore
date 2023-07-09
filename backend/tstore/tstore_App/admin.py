@@ -3,3 +3,4 @@ from .models import *
 
 admin.site.register(Sneakers)
 admin.site.register(Categories)
+admin.site.register(Cart)
