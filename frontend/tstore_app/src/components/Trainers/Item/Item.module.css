@@ -15,10 +15,11 @@
 }
 
 .itemName {
-    font-size: 21px;
+    font-size: 19px;
     color: #181818;
     font-weight: 600;
     margin-left: 35px;
+    height: 67.5px;
 }
 
 .itemDescription {
@@ -32,6 +33,18 @@
     margin-left: 35px;
     margin-top: 10px;
     font-weight: 600;
+}
+
+.addBtn {
+    width: 125px;
+    height: 32px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-left: 35px;
+    margin-top: 20px;
 }
 
 @media (max-width: 1500px) {
