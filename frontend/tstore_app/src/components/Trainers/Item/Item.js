@@ -1,16 +1,11 @@
 import s from './Item.module.css';
 import {Link, useParams} from 'react-router-dom';
+
 const Item = (props) => {
     let { cat } = useParams();
 
     if (!cat) {
-        if (props.item.id === 1) {
-            cat = 'jordan-1';
-        } else if (props.item.id === 2) {
-            cat = 'jordan-4';
-        } else {
-            cat = 'yeezy-boost';
-        }
+        cat = props.item.category;
     }
     return (
         <div className={s.cardItem}>
