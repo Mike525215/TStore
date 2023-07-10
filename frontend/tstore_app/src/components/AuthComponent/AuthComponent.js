@@ -6,7 +6,7 @@ import {services} from '../../services/services.js';
 
 const AuthComponent = () => {
 
-    const { token, username, password, setToken } = useContext(SneakersList);
+    const { token, username, password, setToken, setCart, setUserID } = useContext(SneakersList);
     let html = '';
 
         if (token) {
@@ -15,9 +15,10 @@ const AuthComponent = () => {
                     <div className={s.username}>{username}</div>
                     <button className={s.logoutBtn}
                             onClick={
-                                async() => {
-                                    await services.logout(token, username, password);
+                                () => {
+                                    services.logout(token, username, password);
                                     setToken('');
+                                    setUserID('');
                                 }
                             }>Logout</button>
                 </div>
