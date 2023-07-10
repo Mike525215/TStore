@@ -25,17 +25,17 @@ const services = {
         return request;
     },
 
-    async logout(token, username, password) {
+    logout(token, username, password) {
         const headers = new Headers();
         headers.append('Authorization', 'Token ' + token);
         const body = new FormData();
         body.append("username", username);
         body.append("password", password);
-        const request = await fetch("http://127.0.0.1:8000/auth/token/logout/", {
+        fetch("http://127.0.0.1:8000/auth/token/logout/", {
             method: "POST",
+            headers: headers,
             body: body
         });
-        return request;
     },
     async lookFor(item) {
         const request = await fetch("http://127.0.0.1:8000/api/v1/sneakers?search=" + item);
@@ -43,6 +43,23 @@ const services = {
     },
     async filteringItems(category) {
         const request = await fetch("http://127.0.0.1:8000/api/v1/sneakers?category=" + category);
+        return request;
+    },
+    async addSneakers(item, user) {
+        const body = new FormData();
+        body.append('sneakers', item);
+        body.append('user', user);
+        await fetch("http://127.0.0.1:8000/api/v1/sneakers/", {
+            method: "POST",
+            body: body
+        })
+    },
+    async cartSneakers(user) {
+        const request = await fetch("http://127.0.0.1:8000/api/v1/cart?user=" + user);
+        return request
+    },
+    async getUsers() {
+        const request = await fetch("http://127.0.0.1:8000/api/v1/all_users/");
         return request;
     }
 };
