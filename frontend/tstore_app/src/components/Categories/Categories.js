@@ -16,11 +16,11 @@ const Categories = () => {
                 <section className={s.catList}>
                     <ul>
                         <li>
-                            <Link to="/sneakers/jordan-1/"
+                            <Link to="/sneakers/air-jordan-1/"
                                   onClick={() => filterArray(1)}>Jordan 1</Link>
                         </li>
                         <li>
-                            <Link to="/sneakers/jordan-4/"
+                            <Link to="/sneakers/air-jordan-4/"
                                   onClick={() => filterArray(2)}>Jordan 4</Link>
                         </li>
                         <li>
