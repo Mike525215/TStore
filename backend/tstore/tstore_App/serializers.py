@@ -2,7 +2,6 @@ from rest_framework.serializers import ModelSerializer, StringRelatedField, Prim
 from .models import *
 
 class SneakersSerializer(ModelSerializer):
-    category = StringRelatedField()
     class Meta:
         model = Sneakers
         fields = ["id", "title", "price", "description", "image", "in_stock", "category"]
@@ -10,7 +9,7 @@ class SneakersSerializer(ModelSerializer):
 class CartSerializer(ModelSerializer):
     class Meta:
         model = Cart
-        fields = ["sneakers", "user"]
+        fields = ["id", "sneakers", "user"]
 
 class UserSerializer(ModelSerializer):
     class Meta:
