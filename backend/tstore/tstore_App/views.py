@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView
-from django_filters.rest_framework import DjangoFilterBackend
+from django_filters.rest_framework import DjangoFilterBackend, OrderingFilter
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import filters
 from .serializers import *
@@ -10,7 +10,7 @@ class SneakersAPIView(ListAPIView):
     queryset = Sneakers.objects.all()
     serializer_class = SneakersSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filter_backends = [filters.SearchFilter]
     search_fields = ["title"]
     filterset_fields = ['category']
 
