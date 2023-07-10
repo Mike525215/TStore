@@ -6,7 +6,7 @@ import {SneakersList} from '../../routers/Routers.js';
 
 const Header = () => {
     const [item, setItem] = useState('');
-    const { setSneakers, sneakersRender } = useContext(SneakersList);
+    const { setSneakers, sneakersRender, cartSneakers, id } = useContext(SneakersList);
     return (
         <header>
             <div className={s.logoBlock}>
@@ -34,7 +34,10 @@ const Header = () => {
                        onChange={e => setItem(e.target.value)} value={item} />
             </div>
             <div className={s.cartBlock}>
-                <Link to="/cart/" className={s.cartLink}>
+                <Link to="/cart/" className={s.cartLink}
+                      onClick={() => {
+                          cartSneakers();
+                      }}>
                     <span className={s.totalPrice}>$ 0</span>
                     <span className={s.totalCount}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
