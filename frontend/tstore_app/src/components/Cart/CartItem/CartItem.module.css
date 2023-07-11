@@ -1,0 +1,129 @@
+.cardItem {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+}
+
+.cardImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.itemName {
+    font-size: 19px;
+    color: #181818;
+    font-weight: 600;
+    margin-left: 35px;
+    height: 67.5px;
+}
+
+.itemDescription {
+    color: grey;
+    font-size: 15px;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.itemPrice {
+    margin-left: 35px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.deleteBtn {
+    width: 125px;
+    height: 32px;
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1500px) {
+    .cardItem {
+        width: 325px;
+    }
+
+    .cardImage {
+        width: 275px;
+        height: 275px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .cardItem {
+        width: 300px;
+    }
+
+    .cardImage {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .cardItem {
+        width: 250px;
+    }
+
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .cardItem {
+        width: 250px;
+    }
+
+    .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .cardItem {
+        width: 300px;
+    }
+
+    .cardImage {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardItem {
+        width: 225px;
+        margin-bottom: 15px;
+    }
+    .cardImage {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+
+@media (max-width: 530px) {
+    .cardItem {
+        width: 300px;
+        margin-bottom: 15px;
+    }
+    .cardImage {
+        width: 250px;
+        height: 250px;
+    }
+
+}
