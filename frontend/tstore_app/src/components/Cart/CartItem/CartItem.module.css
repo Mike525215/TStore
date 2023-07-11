@@ -1,4 +1,4 @@
-.cardItem {
+.cartItem {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -6,7 +6,7 @@
     margin-bottom: 22px;
 }
 
-.cardImage {
+.cartImage {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -48,33 +48,33 @@
 }
 
 @media (max-width: 1500px) {
-    .cardItem {
+    .cartItem {
         width: 325px;
     }
 
-    .cardImage {
+    .cartImage {
         width: 275px;
         height: 275px;
     }
 }
 
 @media (max-width: 1225px) {
-    .cardItem {
+    .cartItem {
         width: 300px;
     }
 
-    .cardImage {
+    .cartImage {
         width: 250px;
         height: 250px;
     }
 }
 
 @media (max-width: 1070px) {
-    .cardItem {
+    .cartItem {
         width: 250px;
     }
 
-    .cardImage {
+    .cartImage {
         width: 200px;
         height: 200px;
     }
@@ -82,11 +82,11 @@
 
 
 @media (max-width: 700px) {
-    .cardItem {
+    .cartItem {
         width: 250px;
     }
 
-    .cardImage {
+    .cartImage {
         width: 200px;
         height: 200px;
     }
@@ -94,22 +94,22 @@
 
 
 @media (max-width: 900px) {
-    .cardItem {
+    .cartItem {
         width: 300px;
     }
 
-    .cardImage {
+    .cartImage {
         width: 250px;
         height: 250px;
     }
 }
 
 @media (max-width: 600px) {
-    .cardItem {
+    .cartItem {
         width: 225px;
         margin-bottom: 15px;
     }
-    .cardImage {
+    .cartImage {
         width: 175px;
         height: 175px;
     }
@@ -117,11 +117,11 @@
 
 
 @media (max-width: 530px) {
-    .cardItem {
+    .cartItem {
         width: 300px;
         margin-bottom: 15px;
     }
-    .cardImage {
+    .cartImage {
         width: 250px;
         height: 250px;
     }
