@@ -26,8 +26,8 @@ const Cart = () => {
         html =
             <>
             <span className={s.emptyText}>Cart is empty 😕</span>
-            <span className={s.descriptionText}>Вероятней всего, вы не заказывали ещё кроссовки.
-                                                Для того, чтобы заказать кроссовки, перейди на главную страницу.</span>
+            <span className={s.descriptionText}>More likely, you haven't ordered sneakers yet.
+                                                For order sneakers, you have to move on the main page.</span>
             <img src="https://react-pizza-v2.vercel.app/static/media/empty-cart.db905d1f4b063162f25b.png"
                  alt="" className={s.cartEmptyImage} />
             </>
