@@ -12,11 +12,15 @@ const Cart = () => {
         cartSneakers.push(sneakers[item.sneakers - 1])
     });
 
+    const checkCartItemID = (itemID) => {
+        return cart.filter(item => item.sneakers == itemID);
+    }
+
 
     if (cartSneakers.length > 0) {
         html =
             <div className={s.trainersList}>
-                {cartSneakers.map(item => <CartItem item={item} key={item.id} />)}
+                {cartSneakers.map(item => <CartItem item={item} key={item.id} id={checkCartItemID(item.id)[0].id} />)}
             </div>;
     } else {
         html =
