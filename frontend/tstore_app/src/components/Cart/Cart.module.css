@@ -79,7 +79,6 @@
     text-decoration: none;
 }
 
-
 @media (max-width: 900px) {
     .trainersList {
         grid-template-columns: 1fr 1fr;
@@ -100,3 +99,4 @@
     }
 
 }
+

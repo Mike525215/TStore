@@ -2,7 +2,7 @@ import s from './Cart.module.css';
 import {SneakersList} from '../../routers/Routers.js';
 import {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import {Item} from '../Trainers/Item/Item';
+import {CartItem} from './CartItem/CartItem';
 
 const Cart = () => {
     const { cart, sneakersRender, sneakers } = useContext(SneakersList);
@@ -16,7 +16,7 @@ const Cart = () => {
     if (cartSneakers.length > 0) {
         html =
             <div className={s.trainersList}>
-                {cartSneakers.map(item => <Item item={item} key={item.id} />)}
+                {cartSneakers.map(item => <CartItem item={item} key={item.id} />)}
             </div>;
     } else {
         html =
