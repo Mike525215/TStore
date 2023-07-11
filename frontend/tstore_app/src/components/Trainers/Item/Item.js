@@ -6,20 +6,30 @@ import {services} from '../../../services/services.js';
 
 const Item = (props) => {
     let { cat } = useParams();
-    const { username, userID } = useContext(SneakersList);
+    const { username, userID, cart } = useContext(SneakersList);
     if (!cat) {
         cat = props.item.category;
     }
 
+    const checkItem = cart.filter(item => item.sneakers == props.item.id);
+
     let addBtn = '';
 
     if (username !== '') {
-        addBtn = <button className={s.addBtn}
-                         onClick={
-                             async() => {
-                                await services.addSneakers(props.item.id, userID);
-                             }
-                         }>Add to Cart</button>;
+        addBtn =
+            <button className={s.addBtn}
+                    onClick={
+                        () => {
+                            if (checkItem.length === 0) {
+                                services.addSneakers(props.item.id, userID);
+                            }
+                            else {
+                                console.log('item already in cart');
+                            }
+                        }
+                    }>
+                Add to Cart
+            </button>;
     }
 
     return (
