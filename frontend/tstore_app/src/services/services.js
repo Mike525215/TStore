@@ -45,11 +45,11 @@ const services = {
         const request = await fetch("http://127.0.0.1:8000/api/v1/sneakers?category=" + category);
         return request;
     },
-    async addSneakers(item, user) {
+    addSneakers(item, user) {
         const body = new FormData();
         body.append('sneakers', item);
         body.append('user', user);
-        await fetch("http://127.0.0.1:8000/api/v1/cart/", {
+        fetch("http://127.0.0.1:8000/api/v1/cart/", {
             method: "POST",
             body: body
         })
@@ -61,6 +61,11 @@ const services = {
     async getUsers() {
         const request = await fetch("http://127.0.0.1:8000/api/v1/all_users/");
         return request;
+    },
+    deleteCartItem(itemID) {
+        fetch("http://127.0.0.1:8000/api/v1/cart/" + itemID + "/", {
+            method: "DELETE"
+        });
     }
 };
 
