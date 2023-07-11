@@ -6,11 +6,13 @@ import {services} from '../../services/services.js';
 
 const Categories = () => {
     const { setSneakers } = useContext(SneakersList);
+
     const filterArray = async (category) => {
         const request = await services.filteringItems(category);
         const result = await request.json();
         setSneakers(result);
     }
+
     return (
         <div className={s.categories}>
                 <section className={s.catList}>
