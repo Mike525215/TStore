@@ -16,7 +16,6 @@ const Cart = () => {
         return cart.filter(item => item.sneakers == itemID);
     }
 
-
     if (cartArray.length > 0) {
         html =
             <div className={s.trainersList}>
