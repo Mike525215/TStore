@@ -6,7 +6,7 @@ import {services} from '../../../services/services.js';
 
 const Item = (props) => {
     let { cat } = useParams();
-    const { username, userID, cart } = useContext(SneakersList);
+    const { username, userID, cart, cartSneakers } = useContext(SneakersList);
     if (!cat) {
         cat = props.item.category;
     }
@@ -22,9 +22,7 @@ const Item = (props) => {
                         () => {
                             if (checkItem.length === 0) {
                                 services.addSneakers(props.item.id, userID);
-                            }
-                            else {
-                                console.log('item already in cart');
+                                cartSneakers();
                             }
                         }
                     }>
