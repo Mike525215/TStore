@@ -7,9 +7,9 @@ import {CartItem} from './CartItem/CartItem';
 const Cart = () => {
     const { cart, sneakersRender, sneakers } = useContext(SneakersList);
     let html = '';
-    const cartSneakers = [];
+    const cartArray = [];
     cart.forEach((item) => {
-        cartSneakers.push(sneakers[item.sneakers - 1])
+        cartArray.push(sneakers[item.sneakers - 1])
     });
 
     const checkCartItemID = (itemID) => {
@@ -17,10 +17,10 @@ const Cart = () => {
     }
 
 
-    if (cartSneakers.length > 0) {
+    if (cartArray.length > 0) {
         html =
             <div className={s.trainersList}>
-                {cartSneakers.map(item => <CartItem item={item} key={item.id} id={checkCartItemID(item.id)[0].id} />)}
+                {cartArray.map(item => <CartItem item={item} key={item.id} id={checkCartItemID(item.id)[0].id} />)}
             </div>;
     } else {
         html =
