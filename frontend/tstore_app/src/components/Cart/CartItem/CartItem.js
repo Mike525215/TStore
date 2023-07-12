@@ -1,7 +1,8 @@
 import s from './CartItem.module.css';
 import {services} from '../../../services/services.js';
-
+import {useNavigate} from 'react-router-dom';
 const CartItem = (props) => {
+    const navigate = useNavigate();
     return (
         <div className={s.cartItem}>
             <img className={s.cartImage} src={props.item.image} alt="jordan" />
@@ -9,8 +10,10 @@ const CartItem = (props) => {
             <span className={s.itemDescription}>{props.item.description}</span>
             <span className={s.itemPrice}>${props.item.price}</span>
             <button className={s.deleteBtn}
-                    onClick={() => {
+                    onClick={
+                    () => {
                         services.deleteCartItem(props.id);
+                        navigate("/sneakers/");
                     }}>Delete sneakers</button>
         </div>
     );
