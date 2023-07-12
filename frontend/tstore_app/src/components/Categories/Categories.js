@@ -1,12 +1,13 @@
 import s from './Categories.module.css';
 import {Link} from 'react-router-dom';
 import {SneakersList} from '../../routers/Routers.js';
-import {useContext} from 'react';
+import {useContext, useRef} from 'react';
 import {services} from '../../services/services.js';
 
 const Categories = () => {
     const { setSneakers } = useContext(SneakersList);
 
+    const newRef = useRef();
     const filterArray = async (category) => {
         const request = await services.filteringItems(category);
         const result = await request.json();
@@ -32,13 +33,20 @@ const Categories = () => {
                     </ul>
                 </section>
                 <section className={s.sortBlock}>
-                    <select className={s.selectBlock}>
-                        <option disable="true">Sorting by</option>
-                        <option value="1">Price(up)</option>
-                        <option value="2">Price(down)</option>
-                        <option value="3">Title(up)</option>
-                        <option value="4">Title(down)</option>
+                    <select className={s.selectBlock} ref={newRef}>
+                        <option disable="true">SORTED BY</option>
+                        <option value="1">PRICE(INC)</option>
+                        <option value="2">PRICE(DEC)</option>
                     </select>
+                    <button onClick={
+                        async () => {
+                            let filter = "";
+                            newRef.current.value == 1 ? filter = "price" : filter = "-price"
+                            const request = await services.orderingByPrice(filter);
+                            const result = await request.json();
+                            setSneakers(result);ad
+                        }
+                    }>+</button>
                 </section>
         </div>
     );
