@@ -54,7 +54,6 @@ const Routers = () => {
         authUser();
     }, [username]);
 
-
     return (
         <SneakersList.Provider value={{
             sneakers, setSneakers, sneakersRender, username, setUsername,
