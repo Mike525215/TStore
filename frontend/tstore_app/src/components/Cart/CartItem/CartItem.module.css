@@ -45,6 +45,7 @@
     font-size: 14px;
     margin-left: 35px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 @media (max-width: 1500px) {

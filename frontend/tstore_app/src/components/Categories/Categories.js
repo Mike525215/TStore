@@ -44,9 +44,9 @@ const Categories = () => {
                             newRef.current.value == 1 ? filter = "price" : filter = "-price"
                             const request = await services.orderingByPrice(filter);
                             const result = await request.json();
-                            setSneakers(result);ad
+                            setSneakers(result);
                         }
-                    }>+</button>
+                    } className={s.applyBtn}>SORT</button>
                 </section>
         </div>
     );
